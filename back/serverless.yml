@@ -1,0 +1,64 @@
+service: triplelift-service
+frameworkVersion: "=1.39.1"
+provider:
+  name: aws
+  runtime: nodejs8.10
+functions:
+  createBrand:
+    handler: services/Brand.create
+    events:
+      - http:
+          path: /api/brand
+          method: post
+          cors: true
+  updateBrand:
+    handler: services/Brand.update
+    events:
+      - http:
+          path: /api/brand/{id}
+          method: put
+          cors: true
+  deleteBrand:
+    handler: services/Brand.delete
+    events:
+      - http:
+          path: /api/brand/{id}
+          method: delete
+          cors: true
+  findBrand:
+    handler: services/Brand.find
+    events:
+      - http:
+          path: /api/brand
+          method: get
+          cors: true
+  createCategory:
+    handler: services/Category.create
+    events:
+      - http:
+          path: /api/category
+          method: post
+          cors: true
+  updateCategory:
+    handler: services/Category.update
+    events:
+      - http:
+          path: /api/category/{id}
+          method: put
+          cors: true
+  deleteCategory:
+    handler: services/Category.delete
+    events:
+      - http:
+          path: /api/category/{id}
+          method: delete
+          cors: true
+  findCategory:
+    handler: services/Category.find
+    events:
+      - http:
+          path: /api/category
+          method: get
+          cors: true
+plugins:
+  - serverless-offline

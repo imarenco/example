@@ -1,0 +1,17 @@
+{
+    "unexpected-error": {
+        "icon":"😅",
+        "title": "That’s embarrassing.",
+        "description": "We’re having trouble loading this page right now. Give it another try in a minute or so."
+    },
+    "not-found": {
+        "icon":"😅️",
+        "title": "Oops!",
+        "description": "We're sorry! That page cannot be found."
+    },
+    "forbidden": {
+        "icon":"😅",
+        "title": "Forbidden",
+        "description": "It seems you don't have permissions to access this page. Please contact the administrator."
+    }
+}
